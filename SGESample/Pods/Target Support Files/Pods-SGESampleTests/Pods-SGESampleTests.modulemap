@@ -1,0 +1,6 @@
+framework module Pods_SGESampleTests {
+  umbrella header "Pods-SGESampleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

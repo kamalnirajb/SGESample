@@ -1,0 +1,12 @@
+PODS:
+  - SWActivityIndicatorView (2.0.0)
+
+DEPENDENCIES:
+  - SWActivityIndicatorView
+
+SPEC CHECKSUMS:
+  SWActivityIndicatorView: b3d43933021d3e3ba08a814b43751e3f58031e87
+
+PODFILE CHECKSUM: edfc9880df704feb93fe7dd6cf43d0d6636183e0
+
+COCOAPODS: 1.2.0.beta.3

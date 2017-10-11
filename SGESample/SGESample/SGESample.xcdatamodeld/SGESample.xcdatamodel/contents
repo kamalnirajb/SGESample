@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SGEMessages" representedClassName="SGEMessages" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workHistoryDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workOrderDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workOrderId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workRequestNumber" attributeType="String" syncable="YES"/>
+        <relationship name="historyof" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SGERequests" inverseName="historyfor" inverseEntity="SGERequests" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="SGERequests" representedClassName=".SGERequests" syncable="YES" codeGenerationType="class">
+        <attribute name="assetName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attachments" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preferredDate1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preferredDate2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="problemDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workOrderStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workRequestNumber" attributeType="String" syncable="YES"/>
+        <attribute name="workRequestStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workRequestType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="historyfor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SGEMessages" inverseName="historyof" inverseEntity="SGEMessages" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="workRequestNumber"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="SGERequests" positionX="-549" positionY="71" width="128" height="208"/>
+        <element name="SGEMessages" positionX="-63" positionY="54" width="128" height="163"/>
+    </elements>
+</model>
